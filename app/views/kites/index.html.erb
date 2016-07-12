@@ -1,0 +1,32 @@
+<div id="container" class="ui container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<div class="ui form">
+  <div class="four fields">
+    <div class="field">
+      <%= label_tag 'Chart Type' %>
+      <%= select_tag 'chart_type', options_for_select(['Column', 'Bar', 'Pie'], 'Column'), class: 'ui dropdown', id: 'kite_chart_type' %>
+    </div>
+
+    <div class="field">
+      <%= label_tag 'First Column' %>
+      <%= select_tag 'first_column', options_from_collection_for_select(Kite.column_names, :downcase, :titleize, 'color'), class: 'ui dropdown', id: 'kite_first_column' %>
+    </div>
+
+    <div class="field">
+      <%= label_tag 'Second Column' %>
+      <%= select_tag 'second_column', options_from_collection_for_select(Kite.column_names, :downcase, :titleize, 'size'), class: 'ui dropdown', id: 'kite_second_column' %>
+    </div>
+
+    <div class="field">
+      <%= label_tag 'Third Column' %>
+      <%= select_tag 'third_column', options_from_collection_for_select(Kite.column_names, :downcase, :titleize, 'material'), class: 'ui dropdown', id: 'kite_third_column' %>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  $(function () {
+    Kites.getData();
+  });
+</script>

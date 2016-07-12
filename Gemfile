@@ -7,6 +7,7 @@ gem 'rails', '4.2.5.1'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'semantic-ui-sass', '~> 2.1.8'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -32,7 +33,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'kitechart', git: 'https://github.com/Mbuckley0/kitechart.git', branch: :master
+
 group :development, :test do
+  # Debugging Gems
+  gem 'pry', '~> 0.10.3'
+  gem 'pry-doc', '~> 0.8.0'
+  gem 'pry-rails', '~> 0.3.4'
+  gem 'pry-remote', '~> 0.1.8'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 end

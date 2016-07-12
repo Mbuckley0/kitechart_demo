@@ -12,5 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require semantic-ui
+//= require kitechart
 //= require_tree .
+
+Highcharts.setOptions({
+  lang: {
+    thousandsSep: ','
+  }
+});
