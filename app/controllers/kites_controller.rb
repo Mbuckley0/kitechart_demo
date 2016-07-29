@@ -15,8 +15,8 @@ class KitesController < ApplicationController
 
   def get_json_data
     Kitechart::DataFormatter.new(@kites,
-                                 params[:first_column] || 'color',
-                                 params[:second_column] || 'size',
-                                 params[:third_column] || 'material').get_data
+                                 first_column: params[:first_column] || 'color',
+                                 second_column: params[:second_column] || 'size',
+                                 third_column: params[:third_column] || 'material').get_data
   end
 end

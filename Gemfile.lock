@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Mbuckley0/kitechart.git
-  revision: c13e870ebfeb6389ea24a176e68de82a4d32d462
+  revision: 279573569445b5352011e27e45cde99401819697
   branch: master
   specs:
     kitechart (0.1.0)
