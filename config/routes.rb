@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'kites#index'
   resources :kites, only: :index
+  get '/timeline', action: :index, controller: 'timeline'
+  get '/line', action: :index, controller: 'line'
+  get '/donut', action: :index, controller: 'donut'
+  get '/area', action: :index, controller: 'area'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

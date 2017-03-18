@@ -5,8 +5,8 @@ class KitesController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        colors, size, material = get_json_data
-        render json: { colors: colors, size: size, material: material }
+        data = get_json_data
+        render json: { data: data }
       end
     end
   end
@@ -15,8 +15,8 @@ class KitesController < ApplicationController
 
   def get_json_data
     Kitechart::DataFormatter.new(@kites,
-                                 first_column: params[:first_column] || 'color',
-                                 second_column: params[:second_column] || 'size',
-                                 third_column: params[:third_column] || 'material').get_data
+                                 columns: [params[:first_column] || 'color',
+                                           params[:second_column] || 'size',
+                                           params[:third_column] || 'material']).get_data
   end
 end

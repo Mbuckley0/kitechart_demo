@@ -33,7 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'kitechart', git: 'https://github.com/Mbuckley0/kitechart.git', branch: :master
+gem 'kitechart', git: 'https://github.com/Mbuckley0/kitechart.git', branch: :develop
+
+gem 'momentjs-rails', '2.17.1'
 
 group :development, :test do
   # Debugging Gems
@@ -53,4 +55,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+gem 'faker'
 

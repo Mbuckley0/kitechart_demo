@@ -8,7 +8,7 @@ $(function () {
       var thirdColumn = $('#kite_third_column').val();
 
       $.getJSON($(location).attr('href')+'kites.json', { first_column: firstColumn, second_column: secondColumn, third_column: thirdColumn }).then(function (data) {
-        Chart.generateChart('Kites By Color', 'Count', chartType, data['colors'], data['size'], data['material']);
+        Chart.generateChart('Kites By Color', data, 'Count', chartType);
       });
     }
   };
