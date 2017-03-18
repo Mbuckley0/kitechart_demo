@@ -18,7 +18,7 @@ def random_material
   end
 end
 
-100000.times do
+1000.times do
   started_at = rand(12.months.ago..6.hours.ago)
   end_at = started_at + rand(2..4).hours
 
